@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		var output = '';
+		for(var i = 0; i < 8; i ++) {
+			for(var j = 0; j < 8; j ++) {
+				output += ((i + j) % 2 == 0) ? '#' : ' ';
+			}
+			output += '\n';
+		}
+		console.log(output);
+	</script>
+</body>
+</html>

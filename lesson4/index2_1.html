@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		function countChars(str, letter) {
+			var l = str.length;
+			var cnt = 0;
+			for(var i = 0; i < l; i ++)
+				if(str.charAt(i) == letter) cnt ++;
+			
+			return cnt;
+		}
+		
+		console.log(countChars('mkniuhdnbxuchvknbsdiufkbvkckvjhaoif', 'i'));
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		function countBs(str) {
+			var l = str.length;
+			var cnt = 0;
+			var letter = 'b';
+			for(var i = 0; i < l; i ++)
+				if(str.charAt(i) == letter) cnt ++;
+			
+			return cnt;
+		}
+		
+		console.log(countBs('sdlkjonblkjbbnbjaisdboibiobbbihbiuybkbthguy'));
+	</script>
+</body>
+</html>

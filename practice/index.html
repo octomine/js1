@@ -35,18 +35,42 @@
 			}
 		];
 		
-		var user = {};
-		user.firstName = prompt('Введите имя');
-		user.lastName = prompt('Введите фамилию');
-		user.birthDay = prompt('Введите дату рождения');
-		user.phones = [];
-		user.phones[0] = prompt('Введите номер телефона');
-		users.push(user);
-		
-		var l = users.length;
-		for(var i = 0; i < l; i ++) {
-			console.log('Имя: '+users[i].firstName, 'Фамилия: '+users[i].lastName, 'Дата рождения: '+users[i].birthDay, 'Телефоны: '+users[i].phones);
+		function addUser(users) {
+			var user = {};
+			user.firstName = prompt('Введите имя');
+			user.lastName = prompt('Введите фамилию');
+			user.birthDay = prompt('Введите дату рождения');
+			user.phones = [];
+			while(true) {
+				var phone = prompt('Введите номер телефона (для выхода введите пустой номер)');
+				if(!phone) break;
+				user.phones.push(phone);
+			}
+			users.push(user);
 		}
+		
+		function showUsers(users) {
+			var l = users.length;
+			for(var i = 0; i < l; i ++) {
+				console.log('Имя: '+users[i].firstName, 'Фамилия: '+users[i].lastName, 'Дата рождения: '+users[i].birthDay, 'Телефоны: '+users[i].phones);
+			}
+		}
+		
+		function csvFormat(users) {
+			return users.map(function(user) {
+				return Object.keys(user).map(function(key) {
+					if(typeof user[key] == 'string' || typeof user[key] == 'number') return ''+user[key]+'';
+					else return user[key].map(function(phone) {
+						return ''+phone+'';
+					}).join(';');
+				}).join(';');
+			}).join('\r\n');
+		}
+		
+		addUser(users);
+		showUsers(users);
+		console.log(csvFormat(users))
+		
 	</script>
 </body>
 </html>

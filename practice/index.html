@@ -8,6 +8,7 @@
 	<script>
 		var users = [
 			{
+				id:1,
 				firstName:'Vasiliy',
 				lastName:'Pupkin',
 				birthDay:'06.12.1985',
@@ -17,6 +18,7 @@
 				]
 			},
 			{
+				id:2,
 				firstName:'Ivan',
 				lastName:'Petrov',
 				birthDay:'12.06.1991',
@@ -25,6 +27,7 @@
 				]
 			},
 			{
+				id:3,
 				firstName:'Piotr',
 				lastName:'Ivanov',
 				birthDay:'05.07.1963',
@@ -36,7 +39,7 @@
 		];
 		
 		function addUser(users) {
-			var user = {};
+			var user = { id:new Date().getTime().toString(16) };
 			user.firstName = prompt('Введите имя');
 			user.lastName = prompt('Введите фамилию');
 			user.birthDay = prompt('Введите дату рождения');
@@ -47,6 +50,16 @@
 				user.phones.push(phone);
 			}
 			users.push(user);
+		}
+		
+		function removeUser(users, id) {
+			var l = users.length;
+			for(var i = 0; i < l; i ++) {
+				if(users[i].id == id) {
+					users.splice(i, 1);
+					break;
+				}
+			}
 		}
 		
 		function showUsers(users) {
@@ -70,6 +83,8 @@
 		addUser(users);
 		showUsers(users);
 		console.log(csvFormat(users));
+		removeUser(users, 1);
+		showUsers(users);
 		
 	</script>
 </body>

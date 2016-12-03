@@ -13,9 +13,10 @@
 	  return addZeros(r.toString(16)) + addZeros(g.toString(16)) + addZeros(b.toString(16));
 	}
 	
-	function addZeros(str) {
-	  while(str.length < 2) 
-		str = '0' + str;
+	function addZeros(str, n) {
+		n = n || 2;
+	  while(str.length < n)
+			str = '0' + str;
 	  
 	  return str;
 	}

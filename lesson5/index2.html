@@ -9,16 +9,17 @@
 		function numberToObject(n) {
 			if(n < 0 || n > 999) return 'заданное число должно быть не меньше 0 и не больше 999';
 			
-			var str = addZeros(n.toString());
+			var str = addZeros(n.toString(), 3);
 			return {
-				ones:str[0],
+				hundreds:str[0],
 				tens:str[1],
-				hundreds:str[2]
+				ones:str[2]
 			};
 		}
 		
-		function addZeros(str) {
-			while(str.length < 2) 
+		function addZeros(str, n) {
+			n = n || 2;
+			while(str.length < n) 
 			str = '0' + str;
 			
 			return str;

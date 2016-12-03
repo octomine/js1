@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+  <script>
+	function processColor(r, g, b) {
+		r = Math.min(255, r);
+		g = Math.min(255, g);
+		b = Math.min(255, b);
+	  return addZeros(r.toString(16)) + addZeros(g.toString(16)) + addZeros(b.toString(16));
+	}
+	
+	function addZeros(str) {
+	  while(str.length < 2) 
+		str = '0' + str;
+	  
+	  return str;
+	}
+	
+	console.log(processColor(Number(prompt('Сколько красного?')), 
+														Number(prompt('Сколько зелёного?')), 
+														Number(prompt('Сколько синего?'))));
+  </script>
+</body>
+</html>

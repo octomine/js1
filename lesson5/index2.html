@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		function numberToObject(n) {
+			if(n < 0 || n > 999) return 'заданное число должно быть не меньше 0 и не больше 999';
+			
+			var str = addZeros(n.toString());
+			return {
+				ones:str[0],
+				tens:str[1],
+				hundreds:str[2]
+			};
+		}
+		
+		function addZeros(str) {
+			while(str.length < 2) 
+			str = '0' + str;
+			
+			return str;
+		}
+		
+		console.log(numberToObject(Number(prompt('введите число от 0 до 999'))));
+	</script>
+</body>
+</html>

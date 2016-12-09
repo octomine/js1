@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		var obj = {
+			name:'Sergey',
+			age:30,
+			email:'sergey@gmail.com',
+			friends:['Sveta', 'Artem']
+		};
+		var keys = ['name', 'othernName', 'friends'];
+		
+		// вариант с for(in...)
+		function pick1(obj, keys) {
+			var res = {};
+			for(var prop in obj) {
+				if(keys.indexOf(prop) >= 0) res[prop] = obj[prop];
+			}
+			return res;
+		}
+		
+		// вариант с Array.forEach()
+		function pick2(obj, keys) {
+			var res = {};
+			keys.forEach(function(item) {
+				if(obj[item]) res[item] = obj[item];
+			});
+			return res;
+		}
+		
+		console.log(pick1(obj, keys));
+		console.log(pick2(obj, keys));
+	</script>
+</body>
+</html>

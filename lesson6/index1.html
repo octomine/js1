@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		var iArr = [1, 2, 3];
+		
+		function arrayToList(arr) {
+			var list = null;
+			var l = arr.length;
+			for(var i = l-1; i >= 0; i --) {
+				list = prepend(arr[i], list);
+			}
+			return list;
+		}
+		
+		function prepend(el, list) {
+			return { value:el, rest:list };
+		}
+		
+		var iList = arrayToList(iArr);
+		console.log(iList);
+		
+		function listToArray(list) {
+			var arr = [];
+			var cnt = 0;
+			while(nth(list, cnt)) {
+				arr.push(nth(list, cnt));
+				cnt ++;
+			}
+			return arr;
+		}
+		
+		function nth(list, n) {
+			var cnt = 0;
+			while(cnt < n && list) {
+				list = list.rest;
+				cnt ++;
+			}
+			return (list ? list.value : undefined);
+		}
+		
+		console.log(listToArray(iList));
+	</script>
+</body>
+</html>

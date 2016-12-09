@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		var iArr = [true, 2, 'asdfasd', 4, 5];
+		
+		function reverseArray(arr) {
+			var res = [];
+			arr.forEach(function (item) {
+				res.unshift(item);
+			});
+			return res;
+		}
+		
+		function reverseArrayInPlace(arr) {
+			var l = arr.length;
+			for(var i = 0; i < l; i ++) {
+				arr.unshift(arr[i]);
+				arr.splice(i+1, 1);
+			}
+		}
+		
+		console.log(reverseArray(iArr));
+		console.log(iArr);
+		reverseArrayInPlace(iArr);
+		console.log(iArr);
+	</script>
+</body>
+</html>

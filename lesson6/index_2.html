@@ -19,7 +19,8 @@
 		function reverseArrayInPlace(arr) {
 			var l = arr.length;
 			for(var i = 0; i < l; i ++) {
-				arr.unshift(arr.splice(i, 1).join());// как-то вроде не очень хорошо получается, что ВСЁ становится строкой, но по-другому не придумал ((
+				arr.unshift(arr[i]);
+				arr.splice(i+1, 1);
 			}
 		}
 		

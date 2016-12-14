@@ -1,0 +1,65 @@
+.input-row, .users-table {
+	margin:0 auto;
+	width:635px;
+}
+.input-row {
+	background-color:#aaaaaa;
+	padding:5px 0;
+	border:solid 1px #cccccc;
+}
+.users-table {
+	border:solid 1px #aaaaaa;
+}
+.row {
+	padding:2px 10px 4px;
+}
+.row:nth-child(2n) {
+	background-color:#eeeeff;
+}
+.row:hover {
+	background-color:#ddddff;
+}
+.col, .del, .add {
+	display:inline-block;
+}
+.col {
+	vertical-align:top;
+	width:100px;
+}
+.col:nth-child(4) {
+	width:300px;
+}
+.del, .add {
+	position:absolute;
+	cursor:pointer;
+	border-radius:4px;
+	text-align:center;
+	font-family:Arial;
+	color:white;
+	width:18px;
+	border-bottom:solid 1px #cccccc;
+}
+.del {
+	padding-top:1px;
+	background-color:red;
+}
+.add {
+	padding:3px;
+	background-color:#00aa44;
+}
+.del:active, .add:active {
+	margin-top:1px;
+	border-top:solid 1px #cccccc;
+	border-bottom:none;
+}
+input[type='text'].col {
+	margin-top:2px;
+	width:92px;
+}
+input[type='text'].col:nth-child(1) {
+	margin-left:8px;
+}
+input[type='text'].col:nth-child(4) {
+	width:290px;
+	margin-right:5px;
+}

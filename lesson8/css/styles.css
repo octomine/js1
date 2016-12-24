@@ -1,0 +1,146 @@
+.chess-board {
+	float:left;
+	display:inline-block;
+	background-color:brown;
+	padding-top:20px;
+	padding-right:20px;
+	margin-bottom:5px;
+}
+.coordinates-left {
+	display:inline-block;
+	padding:1px;
+	height:400px;
+	width:18px;
+}
+.coordinates-left .letter {
+	font-family:Arial;
+	color:yellow;
+	font-weight:bold;
+	text-align:center;
+	height:33px;
+	padding-top:17px;
+}
+.coordinates-bottom {
+	margin-left:20px;
+	padding:1px;
+	height:18px;
+	width:400px;
+}
+.coordinates-bottom .letter {
+	display:inline-block;
+	font-family:Arial;
+	color:yellow;
+	font-weight:bold;
+	text-align:center;
+	width:50px;
+}
+.chess-board-table {
+	display:inline-block;
+	vertical-align:top;
+	border:solid 1px yellow;
+	width:400px;
+	height:400px;
+}
+.cell {
+	display:inline-block;
+	margin-bottom:-4px;
+	width:46px;
+	height:46px;
+	padding:2px;
+}
+.cell-white {
+	background-color:yellow;
+}
+.cell-black {
+	background-color:brown;
+}
+.cell-selected {
+	border:solid 2px #888888;
+	padding:0px;
+}
+.piece-holder {
+	vertical-align:top;
+	display:inline-block;
+	width:300px;
+	height:150px;
+	border:solid 1px grey;
+	border-radius:4px;
+	padding:5px 20px;
+	margin:0px 5px 5px;
+	background-color:#dddddd;
+}
+.piece {
+	background-image:url(../img/chess.png);
+}
+.cell-selected.white-pawn {
+	background-position:-2px -2px;
+}
+.cell-selected.white-rook {
+	background-position:-52px -2px;
+}
+.cell-selected.white-knight {
+	background-position:-102px -2px;
+}
+.cell-selected.white-bishop {
+	background-position:-152px -2px;
+}
+.cell-selected.white-queen {
+	background-position:-202px -2px;
+}
+.cell-selected.white-king {
+	background-position:-252px -2px;
+}
+.white-pawn {
+	background-position:0px 0px;
+}
+.white-rook {
+	background-position:-50px 0px;
+}
+.white-knight {
+	background-position:-100px 0px;
+}
+.white-bishop {
+	background-position:-150px 0px;
+}
+.white-queen {
+	background-position:-200px 0px;
+}
+.white-king {
+	background-position:-250px 0px;
+}
+.cell-selected.black-pawn {
+	background-position:-2px -52px;
+}
+.cell-selected.black-rook {
+	background-position:-52px -52px;
+}
+.cell-selected.black-knight {
+	background-position:-102px -52px;
+}
+.cell-selected.black-bishop {
+	background-position:-152px -52px;
+}
+.cell-selected.black-queen {
+	background-position:-202px -52px;
+}
+.cell-selected.black-king {
+	background-position:-252px -52px;
+}
+.black-pawn {
+	background-position:0px -50px;
+}
+.black-rook {
+	background-position:-50px -50px;
+}
+.black-knight {
+	background-position:-100px -50px;
+}
+.black-bishop {
+	background-position:-150px -50px;
+}
+.black-queen {
+	background-position:-200px -50px;
+}
+.black-king {
+	background-position:-250px -50px;
+}

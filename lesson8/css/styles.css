@@ -42,8 +42,7 @@
 	height:400px;
 }
 .cell {
-	display:inline-block;
-	margin-bottom:-4px;
+	float:left;
 	width:46px;
 	height:46px;
 	padding:2px;
